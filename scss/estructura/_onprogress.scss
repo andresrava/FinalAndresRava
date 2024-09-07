@@ -1,0 +1,18 @@
+#btn_gde {
+    height: 30vh;
+    
+    a {
+        color: $para-la-agencia-de-viajes-6-rgba;
+        font-size:xx-large;
+    }
+    &:hover {
+        animation-name: gira;
+        animation-iteration-count: 1;
+        animation-duration: 500ms;
+    }
+}
+
+@keyframes gira {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
+}

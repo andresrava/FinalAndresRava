@@ -1,0 +1,35 @@
+@import "./base/reset";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "./utilidades/variables";
+@import "./utilidades/mixins";
+@import "./utilidades/colors";
+@import "./base/typos";
+@import "./estructura/header";
+@import "./estructura/main";
+@import "./estructura/footer";
+@import "./estructura/onprogress.scss";
+
+
+
+body {
+    height: 100vh;
+    width: auto;
+    font-family: "ejemploMexico";
+    
+}
+ 
+.fondo {
+    position: relative;
+}
+
+.bg-img {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.6;
+    // animation-name: fondo-cambia; 
+    // animation-iteration-count: infinite;
+    // animation-timing-function: ease-in;
+    // animation-duration: 3s;
+    
+}
+

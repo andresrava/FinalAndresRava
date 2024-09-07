@@ -1,0 +1,84 @@
+footer {
+    position: absolute;
+    top: 92%;
+    opacity: 100%;
+    height: 8vh;
+    width: 100vw;
+    background-color: $para-la-agencia-de-viajes-1-rgba-atenuado;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    div {
+        height: 100%;
+        display: inline-block;
+
+    }
+
+    .auto {
+        transform: rotateY(180deg);
+        width: 15vw;
+        height: 15vh;
+        position: absolute;
+        top: -10vh;
+        animation-name: ruta;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-duration: 3s;
+    }
+}
+
+nav {
+    height: auto;
+
+    .navbar-collapse {
+        transform-origin: top;
+      }
+      
+      .navbar-collapse.show {
+        transform: translateY(-120%);
+      }
+
+    .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+  }
+
+  .nav-item {
+    height: 100%;
+    border: 2px solid $para-la-agencia-de-viajes-2-rgba;
+    border-radius: 9px;
+    background-color: $para-la-agencia-de-viajes-1-rgba;
+    display: inline-block;
+    margin: 3px;
+    
+  :hover {
+      border: 2px solid $para-la-agencia-de-viajes-5-rgba;
+      border-radius: 6px;
+      background-color: $para-la-agencia-de-viajes-2-rgba;
+    }
+
+    a {
+        text-wrap: nowrap;
+        text-align: center;
+        justify-content: baseline;
+    }
+  }
+
+}
+
+@keyframes ruta {
+    0%{ 
+        left: 0vw;
+    }
+    100%{  
+        left: 100vw;
+    }
+    
+}
+
+.logo {
+    height: 100%;
+  }

@@ -1,0 +1,62 @@
+header{
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  opacity: 100%;
+  width: 100%;
+  height: 20vh;
+  background-color: $para-la-agencia-de-viajes-1-rgba-atenuado;
+  overflow: visible;
+  div {
+    position: relative;
+  }
+  img {
+    height: 15vh;
+  }
+
+  h1 {
+      text-align: center;
+      margin-top: 15px;
+      color: $para-la-agencia-de-viajes-6-rgba;
+  }
+
+
+  .resto {
+    display: grid;
+    grid-template-areas: 
+    "title login"
+    "title menu";
+    grid-template-rows: auto;
+    grid-template-columns: 5fr 1fr;
+  } 
+
+  .title {
+    grid-area: title;
+  }
+  .login {
+    grid-area: login;
+  }
+  .menu {
+    grid-area: menu;
+    z-index: 10;
+  }
+
+  @media screen and (min-width: 576px) {
+    .resto {
+      display: grid;
+      grid-template-areas: 
+      "title login"
+      "menu menu";
+      grid-template-rows: auto;
+      grid-template-columns: 5fr 1fr;
+    } 
+    .navbar-nav {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+
+}
+
