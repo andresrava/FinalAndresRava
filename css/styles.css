@@ -11910,14 +11910,24 @@ header .menu {
 main {
   position: absolute;
   top: 20%;
-  opacity: 100%;
-  width: 100%;
+  overflow: overlay;
+  width: 100vw;
+  height: 70vh;
 }
 main section {
-  height: 70vh;
+  height: 76vh;
   overflow: overlay;
 }
+main section video {
+  width: 70%;
+  height: auto;
+}
 
+@media (max-width: 768px) {
+  section {
+    height: 38vh;
+  }
+}
 footer {
   position: absolute;
   top: 92%;
@@ -11937,9 +11947,9 @@ footer div {
 footer .auto {
   transform: rotateY(180deg);
   width: 15vw;
-  height: 15vh;
+  height: 10vh;
   position: absolute;
-  top: -10vh;
+  top: -7vh;
   animation-name: ruta;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -11983,9 +11993,19 @@ nav .nav-item a {
 @keyframes ruta {
   0% {
     left: 0vw;
+    transform: rotateY(180deg);
+  }
+  50% {
+    left: 90vw;
+    transform: rotateY(180deg);
+  }
+  51% {
+    left: 90vw;
+    transform: rotateY(0deg);
   }
   100% {
-    left: 100vw;
+    left: 0vw;
+    transform: rotateY(0deg);
   }
 }
 .logo {
@@ -12015,8 +12035,9 @@ nav .nav-item a {
 }
 body {
   height: 100vh;
-  width: auto;
+  width: 100vw;
   font-family: "ejemploMexico";
+  overflow: hidden;
 }
 
 .fondo {

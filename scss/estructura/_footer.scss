@@ -18,9 +18,9 @@ footer {
     .auto {
         transform: rotateY(180deg);
         width: 15vw;
-        height: 15vh;
+        height: 10vh;
         position: absolute;
-        top: -10vh;
+        top: -7vh;
         animation-name: ruta;
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
@@ -72,12 +72,23 @@ nav {
 @keyframes ruta {
     0%{ 
         left: 0vw;
+        transform: rotateY(180deg);
     }
-    100%{  
-        left: 100vw;
+    50%{  
+        left: 90vw;
+        transform: rotateY(180deg);
+    }
+    51% {
+      left: 90vw;
+      transform: rotateY(0deg);
+    }
+    100%{
+      left: 0vw;
+      transform: rotateY(0deg);
     }
     
 }
+
 
 .logo {
     height: 100%;
