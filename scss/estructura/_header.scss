@@ -15,6 +15,18 @@ header{
     height: 15vh;
   }
 
+  .avion {
+    width: 15vw;
+        height: 8vh;
+        position: absolute;
+        top: 12vh;
+        z-index: 100;
+        animation-name: ruta;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-duration: 8s;
+  }
+
   h1 {
       text-align: center;
       margin-top: 15px;
@@ -37,7 +49,7 @@ header{
   .login {
     grid-area: login;
   }
-  .menu {
+  #menu-header {
     grid-area: menu;
     z-index: 10;
   }
@@ -56,7 +68,24 @@ header{
       align-items: center;
     }
   }
+  @keyframes ruta {
+    0%{ 
+        left: 0vw;
+        transform: rotateY(180deg);
+    }
+    50%{  
+        left: 90vw;
+        transform: rotateY(180deg);
+    }
+    51% {
+      left: 90vw;
+      transform: rotateY(0deg);
+    }
+    100%{
+      left: 0vw;
+      transform: rotateY(0deg);
+    }
 
-
+  }
 }
 

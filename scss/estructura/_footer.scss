@@ -24,72 +24,81 @@ footer {
         animation-name: ruta;
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
-        animation-duration: 3s;
+        animation-duration: 12s;
     }
-}
+    nav {
+      height: auto;
+  }
 
-nav {
-    height: auto;
 
-    .navbar-collapse {
-        transform-origin: top;
+  @keyframes ruta {
+      0%{ 
+          left: 0vw;
+          transform: rotateY(180deg);
+      }
+      50%{  
+          left: 90vw;
+          transform: rotateY(180deg);
+      }
+      51% {
+        left: 90vw;
+        transform: rotateY(0deg);
+      }
+      100%{
+        left: 0vw;
+        transform: rotateY(0deg);
       }
       
-      .navbar-collapse.show {
-        transform: translateY(-120%);
+  }
+  
+  
+  .logo {
+      height: 100%;
+    }
+  
+    @media screen and (max-width: 576px) {
+      .logo {
+        height: 70%;
       }
-
-    .navbar-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    overflow: hidden;
-  }
-
-  .nav-item {
-    height: 100%;
-    border: 2px solid $para-la-agencia-de-viajes-2-rgba;
-    border-radius: 9px;
-    background-color: $para-la-agencia-de-viajes-1-rgba;
-    display: inline-block;
-    margin: 3px;
-    
-  :hover {
-      border: 2px solid $para-la-agencia-de-viajes-5-rgba;
-      border-radius: 6px;
-      background-color: $para-la-agencia-de-viajes-2-rgba;
+      
     }
-
-    a {
-        text-wrap: nowrap;
-        text-align: center;
-        justify-content: baseline;
-    }
-  }
-
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow: hidden;
 }
 
-@keyframes ruta {
-    0%{ 
-        left: 0vw;
-        transform: rotateY(180deg);
+.nav-item {
+  height: 100%;
+  border: 2px solid $para-la-agencia-de-viajes-2-rgba;
+  border-radius: 9px;
+  background-color: $para-la-agencia-de-viajes-1-rgba;
+  display: inline-block;
+  margin: 3px;
+  
+:hover {
+    border: 2px solid $para-la-agencia-de-viajes-5-rgba;
+    border-radius: 6px;
+    background-color: $para-la-agencia-de-viajes-2-rgba;
+  }
+
+  a {
+      text-wrap: nowrap;
+      text-align: center;
+      justify-content: baseline;
+  }
+}
+
+.menu-footer {
+
+  .navbar-collapse {
+    transform-origin: top;
     }
-    50%{  
-        left: 90vw;
-        transform: rotateY(180deg);
-    }
-    51% {
-      left: 90vw;
-      transform: rotateY(0deg);
-    }
-    100%{
-      left: 0vw;
-      transform: rotateY(0deg);
+    
+    .navbar-collapse.show {
+    transform: translateY(-120%);
     }
     
 }
-
-
-.logo {
-    height: 100%;
-  }

@@ -7,9 +7,13 @@ main {
     section {
         height: 76vh;
         overflow: overlay;
+        color: $para-la-agencia-de-viajes-6-rgba;
+
         video {
-            width: 70%;
+            width: 100%;
             height: auto;
+            border: 5px double $para-la-agencia-de-viajes-5-rgba;
+            margin-top: 5vh;
             
         }
     }

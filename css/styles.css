@@ -11873,6 +11873,17 @@ header div {
 header img {
   height: 15vh;
 }
+header .avion {
+  width: 15vw;
+  height: 8vh;
+  position: absolute;
+  top: 12vh;
+  z-index: 100;
+  animation-name: ruta;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 8s;
+}
 header h1, header .h1 {
   text-align: center;
   margin-top: 15px;
@@ -11890,7 +11901,7 @@ header .title {
 header .login {
   grid-area: login;
 }
-header .menu {
+header #menu-header {
   grid-area: menu;
   z-index: 10;
 }
@@ -11906,6 +11917,24 @@ header .menu {
     align-items: center;
   }
 }
+@keyframes ruta {
+  0% {
+    left: 0vw;
+    transform: rotateY(180deg);
+  }
+  50% {
+    left: 90vw;
+    transform: rotateY(180deg);
+  }
+  51% {
+    left: 90vw;
+    transform: rotateY(0deg);
+  }
+  100% {
+    left: 0vw;
+    transform: rotateY(0deg);
+  }
+}
 
 main {
   position: absolute;
@@ -11917,10 +11946,13 @@ main {
 main section {
   height: 76vh;
   overflow: overlay;
+  color: rgb(80, 33, 8);
 }
 main section video {
-  width: 70%;
+  width: 100%;
   height: auto;
+  border: 5px double rgb(114, 47, 11);
+  margin-top: 5vh;
 }
 
 @media (max-width: 768px) {
@@ -11953,43 +11985,11 @@ footer .auto {
   animation-name: ruta;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  animation-duration: 3s;
+  animation-duration: 12s;
 }
-
-nav {
+footer nav {
   height: auto;
 }
-nav .navbar-collapse {
-  transform-origin: top;
-}
-nav .navbar-collapse.show {
-  transform: translateY(-120%);
-}
-nav .navbar-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  overflow: hidden;
-}
-nav .nav-item {
-  height: 100%;
-  border: 2px solid rgb(182, 75, 18);
-  border-radius: 9px;
-  background-color: rgb(216, 90, 22);
-  display: inline-block;
-  margin: 3px;
-}
-nav .nav-item :hover {
-  border: 2px solid rgb(114, 47, 11);
-  border-radius: 6px;
-  background-color: rgb(182, 75, 18);
-}
-nav .nav-item a {
-  text-wrap: nowrap;
-  text-align: center;
-  justify-content: baseline;
-}
-
 @keyframes ruta {
   0% {
     left: 0vw;
@@ -12008,8 +12008,46 @@ nav .nav-item a {
     transform: rotateY(0deg);
   }
 }
-.logo {
+footer .logo {
   height: 100%;
+}
+@media screen and (max-width: 576px) {
+  footer .logo {
+    height: 70%;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.nav-item {
+  height: 100%;
+  border: 2px solid rgb(182, 75, 18);
+  border-radius: 9px;
+  background-color: rgb(216, 90, 22);
+  display: inline-block;
+  margin: 3px;
+}
+.nav-item :hover {
+  border: 2px solid rgb(114, 47, 11);
+  border-radius: 6px;
+  background-color: rgb(182, 75, 18);
+}
+.nav-item a {
+  text-wrap: nowrap;
+  text-align: center;
+  justify-content: baseline;
+}
+
+.menu-footer .navbar-collapse {
+  transform-origin: top;
+}
+.menu-footer .navbar-collapse.show {
+  transform: translateY(-120%);
 }
 
 #btn_gde {
