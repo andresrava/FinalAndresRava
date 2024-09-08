@@ -20,6 +20,7 @@ footer {
         width: 15vw;
         height: 10vh;
         position: absolute;
+        z-index: 20;
         top: -7vh;
         animation-name: ruta;
         animation-iteration-count: infinite;
@@ -31,25 +32,6 @@ footer {
   }
 
 
-  @keyframes ruta {
-      0%{ 
-          left: 0vw;
-          transform: rotateY(180deg);
-      }
-      50%{  
-          left: 90vw;
-          transform: rotateY(180deg);
-      }
-      51% {
-        left: 90vw;
-        transform: rotateY(0deg);
-      }
-      100%{
-        left: 0vw;
-        transform: rotateY(0deg);
-      }
-      
-  }
   
   
   .logo {
@@ -63,33 +45,7 @@ footer {
       
     }
 }
-.navbar-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  overflow: hidden;
-}
 
-.nav-item {
-  height: 100%;
-  border: 2px solid $para-la-agencia-de-viajes-2-rgba;
-  border-radius: 9px;
-  background-color: $para-la-agencia-de-viajes-1-rgba;
-  display: inline-block;
-  margin: 3px;
-  
-:hover {
-    border: 2px solid $para-la-agencia-de-viajes-5-rgba;
-    border-radius: 6px;
-    background-color: $para-la-agencia-de-viajes-2-rgba;
-  }
-
-  a {
-      text-wrap: nowrap;
-      text-align: center;
-      justify-content: baseline;
-  }
-}
 
 .menu-footer {
 

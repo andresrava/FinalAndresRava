@@ -1,6 +1,6 @@
 #btn_gde {
     height: 30vh;
-    
+    background-color: $para-la-agencia-de-viajes-6-rgba;
     a {
         color: $para-la-agencia-de-viajes-6-rgba;
         font-size:xx-large;
@@ -8,7 +8,7 @@
     &:hover {
         animation-name: gira;
         animation-iteration-count: 1;
-        animation-duration: 500ms;
+        animation-duration: 700ms;
     }
 }
 

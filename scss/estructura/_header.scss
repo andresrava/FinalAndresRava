@@ -17,20 +17,20 @@ header{
 
   .avion {
     width: 15vw;
-        height: 8vh;
-        position: absolute;
-        top: 12vh;
-        z-index: 100;
-        animation-name: ruta;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        animation-duration: 8s;
+    height: 8vh;
+    position: absolute;
+    top: 12vh;
+    z-index: 100;
+    animation-name: ruta;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 8s;
   }
 
   h1 {
-      text-align: center;
-      margin-top: 15px;
-      color: $para-la-agencia-de-viajes-6-rgba;
+    text-align: center;
+    margin-top: 15px;
+    color: $para-la-agencia-de-viajes-6-rgba;
   }
 
 
@@ -56,7 +56,6 @@ header{
 
   @media screen and (min-width: 576px) {
     .resto {
-      display: grid;
       grid-template-areas: 
       "title login"
       "menu menu";
@@ -68,24 +67,6 @@ header{
       align-items: center;
     }
   }
-  @keyframes ruta {
-    0%{ 
-        left: 0vw;
-        transform: rotateY(180deg);
-    }
-    50%{  
-        left: 90vw;
-        transform: rotateY(180deg);
-    }
-    51% {
-      left: 90vw;
-      transform: rotateY(0deg);
-    }
-    100%{
-      left: 0vw;
-      transform: rotateY(0deg);
-    }
-
-  }
+  
 }
 
