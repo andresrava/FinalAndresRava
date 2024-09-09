@@ -1,26 +1,66 @@
 main {
     position: absolute;
     top: 20%;
-    overflow: overlay;
+    overflow: hidden;
     width: 100vw;
     height: 70vh;
     section {
-        height: 76vh;
+        height: 70vh;
         overflow: overlay;
         color: $para-la-agencia-de-viajes-6-rgba;
-
         video {
-            width: 100%;
+            width: 90%;
             height: auto;
             border: 5px double $para-la-agencia-de-viajes-5-rgba;
             margin-top: 5vh;
-            
+            margin: 15px;
         }
+        .carousel {
+            max-height: 72vh;
+            
+            
+            
+                
+        }
+        
+        .card {
+            background-color: $para-la-agencia-de-viajes-4-rgba-atenuado;
+            .card-img-top {
+                height: 45vh;
+                width:fit-content;
+            }
+            p {
+                padding: 15px;
+                font-size: large;
+                text-align: end;
+                color: $para-la-agencia-de-viajes-6-rgba;
+            }
+        }
+        
+    }
+    .section-2 {
+        p {
+            padding: 15px;
+            font-size: larger;
+            text-align: center;
+            color: $para-la-agencia-de-viajes-6-rgba;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .section-1 {
+            height: 45vh;
+        } 
+        .section-2 {
+            height: 30vh;
+        } 
+    }
+    @media screen and (max-width: 768px) {
+        .section-1-home {
+            height: 25vh;
+        } 
+        .section-2-home {
+            height: 45vh;
+        } 
     }
 }
 
-@media (max-width: 768px) {
-    section {
-        height: 38vh;
-    } 
-}
