@@ -11936,44 +11936,12 @@ main section {
   overflow: overlay;
   color: rgb(80, 33, 8);
 }
-main section .btn-primary {
-  color: rgb(224, 94, 23);
-}
-main section .btn-primary:hover {
-  background-color: rgb(224, 94, 23);
-}
 main section video {
   width: 90%;
   height: auto;
   border: 5px double rgb(114, 47, 11);
   margin-top: 5vh;
   margin: 15px;
-}
-main section nav {
-  height: 100%;
-}
-main section nav div {
-  height: 100%;
-  padding: 10px;
-}
-main section nav div .btn_gde {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: rgb(114, 47, 11);
-  border: 5px solid rgb(182, 75, 18);
-  background-color: rgba(148, 61, 15, 0.7);
-}
-main section nav div .btn_gde:hover {
-  color: rgb(114, 47, 11);
-  background-color: rgba(182, 75, 18, 0.7);
-  border: 7px solid rgb(224, 94, 23);
-}
-main section nav div a {
-  text-decoration: none;
-  height: 100%;
-  border: none;
-  align-items: center;
 }
 main section .carousel {
   max-height: 72vh;
@@ -11982,7 +11950,6 @@ main section .card {
   background-color: rgba(148, 61, 15, 0.7);
 }
 main section .card .card-img-top {
-  align-items: center;
   height: 45vh;
   width: fit-content;
 }
@@ -12012,14 +11979,6 @@ main .section-2 p {
   }
   main .section-2-home {
     height: 45vh;
-  }
-}
-@media screen and (max-width: 768px) {
-  main .section-1-contacto {
-    height: 52vh;
-  }
-  main .section-2-contacto {
-    height: 20vh;
   }
 }
 
