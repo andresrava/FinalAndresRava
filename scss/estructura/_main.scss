@@ -80,23 +80,7 @@ main {
             text-align: center;
             color: $para-la-agencia-de-viajes-6-rgba;
         }
-        
-        // .btn_gde {
-        //     display: flex;
-        //     flex-direction: column;
-        //     justify-content: center;
-        //     background-color: $para-la-agencia-de-viajes-1-rgba;
-        //     border: 5px solid $para-la-agencia-de-viajes-2-rgba;
-        
-        //     &:hover {
-        //         background-color: $para-la-agencia-de-viajes-2-rgba;
-        //         border: 7px solid $para-la-agencia-de-viajes-3-rgba;
-        //     }
-        //     &:focus-visible {
-        //         background-color: $para-la-agencia-de-viajes-3-rgba;
-        //         border: 7px solid $para-la-agencia-de-viajes-4-rgba;
-        //     }
-        //   }
+   
     }
     @media screen and (max-width: 768px) {
         .section-1 {
