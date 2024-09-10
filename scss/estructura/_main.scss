@@ -8,12 +8,45 @@ main {
         height: 70vh;
         overflow: overlay;
         color: $para-la-agencia-de-viajes-6-rgba;
+        .btn-primary {
+            color: $para-la-agencia-de-viajes-3-rgba;
+            &:hover {
+                background-color: $para-la-agencia-de-viajes-3-rgba;
+            }
+        }
         video {
             width: 90%;
             height: auto;
             border: 5px double $para-la-agencia-de-viajes-5-rgba;
             margin-top: 5vh;
             margin: 15px;
+        }
+        nav {
+            height: 100%;
+            div {
+                height: 100%;
+                padding: 10px;
+                .btn_gde {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: $para-la-agencia-de-viajes-5-rgba;
+                    border: 5px solid $para-la-agencia-de-viajes-2-rgba;
+                    background-color: $para-la-agencia-de-viajes-4-rgba-atenuado;
+                    &:hover {
+                        color: $para-la-agencia-de-viajes-5-rgba;
+                        background-color: $para-la-agencia-de-viajes-2-rgba-atenuado;
+                        border: 7px solid $para-la-agencia-de-viajes-3-rgba;
+                    }
+                
+                  }
+                a {
+                    text-decoration: none;
+                    height: 100%;
+                    border: none;
+                    align-items: center;
+                }
+            }
         }
         .carousel {
             max-height: 72vh;
@@ -25,7 +58,9 @@ main {
         
         .card {
             background-color: $para-la-agencia-de-viajes-4-rgba-atenuado;
+            
             .card-img-top {
+                align-items: center;
                 height: 45vh;
                 width:fit-content;
             }
@@ -45,6 +80,23 @@ main {
             text-align: center;
             color: $para-la-agencia-de-viajes-6-rgba;
         }
+        
+        // .btn_gde {
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     background-color: $para-la-agencia-de-viajes-1-rgba;
+        //     border: 5px solid $para-la-agencia-de-viajes-2-rgba;
+        
+        //     &:hover {
+        //         background-color: $para-la-agencia-de-viajes-2-rgba;
+        //         border: 7px solid $para-la-agencia-de-viajes-3-rgba;
+        //     }
+        //     &:focus-visible {
+        //         background-color: $para-la-agencia-de-viajes-3-rgba;
+        //         border: 7px solid $para-la-agencia-de-viajes-4-rgba;
+        //     }
+        //   }
     }
     @media screen and (max-width: 768px) {
         .section-1 {
@@ -60,6 +112,14 @@ main {
         } 
         .section-2-home {
             height: 45vh;
+        } 
+    }
+    @media screen and (max-width: 768px) {
+        .section-1-contacto {
+            height: 52vh;
+        } 
+        .section-2-contacto {
+            height: 20vh;
         } 
     }
 }
