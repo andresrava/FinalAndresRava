@@ -8,6 +8,13 @@ header{
   height: 20vh;
   background-color: $para-la-agencia-de-viajes-1-rgba-atenuado;
   overflow: visible;
+  .btn-success {
+    color: $para-la-agencia-de-viajes-3-rgba;
+    border: 2px solid $para-la-agencia-de-viajes-2-rgba;
+    &:hover {
+      background-color: $para-la-agencia-de-viajes-2-rgba;
+    }
+  }
   div {
     position: relative;
   }

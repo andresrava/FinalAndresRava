@@ -11867,6 +11867,13 @@ header {
   background-color: rgba(216, 90, 22, 0.7);
   overflow: visible;
 }
+header .btn-success {
+  color: rgb(224, 94, 23);
+  border: 2px solid rgb(182, 75, 18);
+}
+header .btn-success:hover {
+  background-color: rgb(182, 75, 18);
+}
 header div {
   position: relative;
 }
