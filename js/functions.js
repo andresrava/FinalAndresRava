@@ -7,6 +7,7 @@ function filterBy(key) {
 function renderizaCards (lista) {
     let salida = "";
     for (const element of lista) {
+        console.log(element.nombre);
         if (salida.length == 0) {
             salida = `<div class="carousel-item active">
                         <div class="card" >
@@ -31,5 +32,7 @@ function renderizaCards (lista) {
                           </div>`
         }
     }
+    console.log("Salida(función): " + salida);
+    return salida;
 }
 

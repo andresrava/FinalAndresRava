@@ -7,7 +7,7 @@
         "destinos": true,
         "paquetes": false,
         "promocion": true,
-        "image": "resources/images/destinos/base extraterrestre.jpeg"
+        "image": "../resources/images/destinos/base extraterrestre.jpeg"
     },
     {
         "nombre": "Gran Cañón",
@@ -17,7 +17,7 @@
         "destinos": true,
         "paquetes": false,
         "promocion": false,
-        "image": "resources/images/destinos/grancanion.webp"
+        "image": "../resources/images/destinos/grancanion.webp"
     },
     {
         "nombre": "Gran Muralla China",
@@ -27,7 +27,7 @@
         "destinos": true,
         "paquetes": false,
         "promocion": false,
-        "image": "resources/images/destinos/great-wall_1359-1016.webp"
+        "image": "../resources/images/destinos/great-wall_1359-1016.webp"
     },
     {
         "nombre": "Pirámides de Egipto",
@@ -37,7 +37,7 @@
         "destinos": true,
         "paquetes": false,
         "promocion": true,
-        "image": "resources/images/destinos/pirámides rectangular.webp"
+        "image": "../resources/images/destinos/pirámides rectangular.webp"
     },
     {
         "nombre": "Roma",
@@ -47,7 +47,7 @@
         "destinos": false,
         "paquetes": true,
         "promocion": true,
-        "image": "resources/images/paquetes/coliseo.webp"
+        "image": "../resources/images/paquetes/coliseo.webp"
     },
     {
         "nombre": "Moscú",
@@ -57,7 +57,7 @@
         "destinos": false,
         "paquetes": false,
         "promocion": true,
-        "image": "resources/images/paquetes/istockphoto-1364293537-1024x1024.webp"
+        "image": "../resources/images/paquetes/istockphoto-1364293537-1024x1024.webp"
     },
     {
         "nombre": "Perú",
@@ -67,7 +67,7 @@
         "destinos": false,
         "paquetes": true,
         "promocion": true,
-        "image": "resources/images/paquetes/machu-picchu-peru-1.webp"
+        "image": "../resources/images/paquetes/machu-picchu-peru-1.webp"
     },
     {
         "nombre": "Luna",
@@ -77,7 +77,7 @@
         "destinos": false,
         "paquetes": true,
         "promocion": true,
-        "image": "resources/images/paquetes/mate_en_la_luna.webp"
+        "image": "../resources/images/paquetes/mate_en_la_luna.webp"
     },
     {
         "nombre": "Australia",
@@ -87,6 +87,6 @@
         "destinos": false,
         "paquetes": true,
         "promocion": false,
-        "image": "resources/images/paquetes/sidney.webp"
+        "image": "../resources/images/paquetes/sidney.webp"
     }
 ]

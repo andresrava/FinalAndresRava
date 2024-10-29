@@ -5,5 +5,6 @@ let filterByDestino = filterBy('destinos');
 const destinos = filterByDestino(productos);
 console.log(destinos);
 let destinosHtml = renderizaCards(destinos);
-let destinosCards = document.getElementsByClassName("carousel-inner");
-destinosCards = destinosHtml;
+console.log("DestinosHtml: " + destinosHtml);
+let destinosCards = document.getElementById("carrusell");
+destinosCards.innerHTML = destinosHtml;
