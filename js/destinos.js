@@ -8,3 +8,4 @@ let destinosHtml = renderizaCardsCarousel(destinos);
 console.log("DestinosHtml: " + destinosHtml);
 let destinosCards = document.getElementById("carrusell");
 destinosCards.innerHTML = destinosHtml;
+activaBotones(destinos);
