@@ -10,7 +10,6 @@ function renderizaCardsCarousel (lista) {
     let salida = "";
     let indice = 1;
     for (const element of lista) {
-        console.log(element.nombre);
         if (salida.length == 0) {
             salida = `<div class="carousel-item active">
                         <div class="card" >
@@ -36,7 +35,6 @@ function renderizaCardsCarousel (lista) {
         }
         indice += 1;
     }
-    console.log("Salida(función): " + salida);
     return salida;
 }
 
@@ -59,36 +57,41 @@ function renderizaCardsLista (lista) {
 
 function agregaAlCarrito(producto) {
   let cantidad = null;
+  let codigo = producto.id;
   while (true)   {
     cantidad = prompt("¿Cuántas personas?");
-    if (isNaN(cuotas)) {
+    if (isNaN(cantidad)) {
         //Valido
         alert("Por favor, ingrese solo números!")
     }
     else {
-        break
+      cantidad = parseInt(cantidad);
+      break
     }
   }
-  let carrito = localStorage.getItem(JSON.parse(carrito));
-  nombre = producto.nombre;
+  let carrito = JSON.parse(localStorage.getItem("carrito"));
   if (carrito) {
-    
-    let compra = carrito[nombre];
-    compra += cantidad;
-    carrito[nombre] = compra;
-    localStorage.setItem(carrito, carrito);
+    let compra = parseInt(carrito[codigo]);
+    console.log("La compra es: " + compra);
+    if (compra) {
+      compra += cantidad;
+      carrito[codigo] = compra;
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+    else {
+      carrito[codigo] = cantidad;
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
   }
   else {
-    let carrito = {nombre: cantidad};
-    localStorage.setItem(carrito, carrito);
+    let carrito = {[codigo]: cantidad};
+    localStorage.setItem('carrito', JSON.stringify(carrito));
   }
-  carrito = localStorage.getItem(JSON.parse(carrito));
-  console.log("El carrito es: " + carrito);
+  carrito = localStorage.getItem('carrito');
 }
 
 
 function activaBotones(lista) {
-  console.log("La lista es: " + lista);
   for (let i = 1; i <= lista.length; i++) {
       let clave = "elemento"
       clave = clave.concat(i);
