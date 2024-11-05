@@ -8,3 +8,4 @@ activaBotones(paquetes);
 let carritoHtml = renderizaCarrito();
 let carritoPH = document.getElementById("carrito");
 carritoPH.innerHTML = carritoHtml;
+activaBotonesCarrito();

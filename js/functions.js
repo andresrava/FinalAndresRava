@@ -87,7 +87,7 @@ function agregaAlCarrito(producto) {
     let carrito = {[codigo]: cantidad};
     localStorage.setItem('carrito', JSON.stringify(carrito));
   }
-  carrito = localStorage.getItem('carrito');
+  // carrito = localStorage.getItem('carrito');
 }
 
 
@@ -109,29 +109,78 @@ function renderizaCarrito() {
   let total = 0;
   const productos = JSON.parse(localStorage.getItem('productos'));
   const carrito = JSON.parse(localStorage.getItem('carrito'));
+  console.log("Lo que obtengo como carrito es: " + JSON.stringify(carrito));
   if (carrito) {
     const compra = Object.keys(carrito);
-    console.log("Carrito: " + carrito);
-    console.log("El tipo de carrito es: " + typeof carrito);
-    console.log("Compra: " + compra)
-    console.log("El tipo de compra es: " + typeof compra);
-    // let prueba = ["primero", "segundo"];
-    // console.log("prueba: " + prueba)
-    // console.log("El tipo de prueba es: " + typeof prueba);
+    console.log("Compra es: " + compra);
     compra.forEach(element => {
-      let nombre = productos[element].nombre;
-      let precioUnitario = productos[element].precio;
+      let nombre = productos[element-1].nombre;
+      let codigo = productos[element-1].id;
+      let precioUnitario = productos[element-1].precio;
       let cantidad = carrito[element];
       let importeParcial = cantidad * precioUnitario
-      salida += `<div><a> Articulo: ${nombre} Cantidad: ${cantidad} Precio unitario: ${precioUnitario} ==> $ ${importeParcial}</a><button type="button" class="btn btn-success">Elimina</button></div>`
+      salida += `<div><a> Articulo: ${nombre} Cantidad: ${cantidad} Precio unitario: ${precioUnitario} ==> $ ${importeParcial}</a><button type="button" id="${"carrito" + codigo}" class="btn btn-success">Elimina</button></div>`
       total += importeParcial;
     });
-    salida += `<div><a> Total: ${total} <button type="button" class="btn btn-success">Pagar</button><button type="button" class="btn btn-success">Borra el Carrito</button></div>`
+    salida += `<div><a> Total: ${total} <button type="button" class="btn btn-success">Pagar</button><button type="button" class="btn btn-success" id="borraCarrito">Borra el Carrito</button></div>`
   } else {
     salida = "Carrito vacío"
   }
   
   return salida;
+}
+
+function borraCarrito() {
+  localStorage.removeItem("carrito");
+  let carritoHtml = renderizaCarrito();
+  let carritoPH = document.getElementById("carrito");
+  carritoPH.innerHTML = carritoHtml;
+
+}
+
+function activaBotonesCarrito() {
+  let boton = document.getElementById('borraCarrito');
+  boton.addEventListener("click", () => {
+    borraCarrito();
+  })
+  const carrito = JSON.parse(localStorage.getItem('carrito'));
+  const compra = Object.keys(carrito);
+  for (let i = 1; i <= compra.length; i++) {
+    let clave = "carrito"
+    clave = clave.concat(compra[i-1]);
+    console.log("compra[i-1] es: " + compra[i-1]);
+    let boton = document.getElementById(clave);
+    boton.addEventListener("click", () => {
+        borraDelCarrito(compra[i-1]);
+    })
+  }
+  
+}
+
+
+function borraDelCarrito(codigo) {
+  const carrito = JSON.parse(localStorage.getItem('carrito'));
+  let cantidad = carrito[codigo];
+  confirma = confirm("Actualmente hay " + cantidad + " unidades de este producto. " + "\n" + "¿Desea eliminarlas todas?");
+  if (confirma) {
+    delete carrito[codigo];
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+  } else {
+    while (true)   {
+      cantidad = prompt("Ingrese la nueva cantidad:");
+      if (isNaN(cantidad)) {
+          //Valido
+          alert("Por favor, ingrese solo números!")
+      }
+      else {
+        cantidad = parseInt(cantidad);
+        break
+      }
+    } 
+    carrito[codigo] = cantidad;
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+  }
+  
 }
 
 

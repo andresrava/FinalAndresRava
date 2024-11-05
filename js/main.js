@@ -13,3 +13,4 @@ fetch('resources/productos.json')
 let carritoHtml = renderizaCarrito();
 let carritoPH = document.getElementById("carrito");
 carritoPH.innerHTML = carritoHtml;  
+activaBotonesCarrito();
