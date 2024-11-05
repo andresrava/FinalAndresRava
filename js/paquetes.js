@@ -5,3 +5,6 @@ let paquetesHtml = renderizaCardsLista(paquetes);
 let paquetesCards = document.getElementById("carrusell");
 paquetesCards.innerHTML = paquetesHtml;
 activaBotones(paquetes);
+let carritoHtml = renderizaCarrito();
+let carritoPH = document.getElementById("carrito");
+carritoPH.innerHTML = carritoHtml;

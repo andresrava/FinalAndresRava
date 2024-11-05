@@ -8,3 +8,8 @@ fetch('resources/productos.json')
         console.log('Productos guardados en localStorage:', listaProductos);
     })
     .catch((error) => console.log('Error cargando los productos: ', error));
+
+ 
+let carritoHtml = renderizaCarrito();
+let carritoPH = document.getElementById("carrito");
+carritoPH.innerHTML = carritoHtml;  

@@ -102,3 +102,36 @@ function activaBotones(lista) {
   }
 }
 
+
+
+function renderizaCarrito() {
+  let salida = "";
+  let total = 0;
+  const productos = JSON.parse(localStorage.getItem('productos'));
+  const carrito = JSON.parse(localStorage.getItem('carrito'));
+  if (carrito) {
+    const compra = Object.keys(carrito);
+    console.log("Carrito: " + carrito);
+    console.log("El tipo de carrito es: " + typeof carrito);
+    console.log("Compra: " + compra)
+    console.log("El tipo de compra es: " + typeof compra);
+    // let prueba = ["primero", "segundo"];
+    // console.log("prueba: " + prueba)
+    // console.log("El tipo de prueba es: " + typeof prueba);
+    compra.forEach(element => {
+      let nombre = productos[element].nombre;
+      let precioUnitario = productos[element].precio;
+      let cantidad = carrito[element];
+      let importeParcial = cantidad * precioUnitario
+      salida += `<div><a> Articulo: ${nombre} Cantidad: ${cantidad} Precio unitario: ${precioUnitario} ==> $ ${importeParcial}</a><button type="button" class="btn btn-success">Elimina</button></div>`
+      total += importeParcial;
+    });
+    salida += `<div><a> Total: ${total} <button type="button" class="btn btn-success">Pagar</button><button type="button" class="btn btn-success">Borra el Carrito</button></div>`
+  } else {
+    salida = "Carrito vacío"
+  }
+  
+  return salida;
+}
+
+
