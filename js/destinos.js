@@ -1,0 +1,11 @@
+let productos = JSON.parse(localStorage.getItem('productos'));
+let filterByDestino = filterBy('destinos');
+const destinos = filterByDestino(productos);
+let destinosHtml = renderizaCardsCarousel(destinos);
+let destinosCards = document.getElementById("carrusell");
+destinosCards.innerHTML = destinosHtml;
+activaBotones(destinos);
+let carritoHtml = renderizaCarrito();
+let carritoPH = document.getElementById("carrito");
+carritoPH.innerHTML = carritoHtml;
+activaBotonesCarrito();

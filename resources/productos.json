@@ -1,0 +1,101 @@
+[
+    {   
+        "id": 1,
+        "nombre": "Base extraterrestre",
+        "descripción": "Viaja a una colonia espacial, donde la aventura y la exploración no tienen límites. Descubre paisajes extraterrestres, flota en gravedad cero y experimenta la vida en el espacio. Sumérgete en un entorno futurista, donde la ciencia y la tecnología se fusionan, ofreciendo una experiencia única fuera de este mundo.",
+        "encabezado": "Aventura incomparable!",
+        "precio": 3000,
+        "destinos": true,
+        "paquetes": false,
+        "promocion": true,
+        "image": "../resources/images/destinos/base extraterrestre.jpeg"
+    },
+    {   
+        "id": 2,
+        "nombre": "Gran Cañón",
+        "descripción": "El Gran Cañón, una de las maravillas naturales más impresionantes del mundo, te espera para vivir una experiencia inolvidable. Admira sus paisajes únicos, esculpidos por el río Colorado a lo largo de millones de años. Explora sus senderos, disfruta de sus vistas panorámicas y siente la grandeza de la naturaleza.",
+        "encabezado": "Un paisaje extremo!",
+        "precio": 2000,
+        "destinos": true,
+        "paquetes": false,
+        "promocion": false,
+        "image": "../resources/images/destinos/grancanion.webp"
+    },
+    {
+        "id": 3,
+        "nombre": "Gran Muralla China",
+        "descripción": "China, una tierra de contrastes entre la tradición milenaria y la modernidad, te invita a descubrir sus tesoros. Recorre la majestuosa Gran Muralla, explora los antiguos templos de Pekín y Shanghái, y maravíllate con sus paisajes únicos. Vive una experiencia inolvidable en este fascinante destino lleno de historia y cultura.",
+        "encabezado": "Modernidad y tradición",
+        "precio": 1700,
+        "destinos": true,
+        "paquetes": false,
+        "promocion": false,
+        "image": "../resources/images/destinos/great-wall_1359-1016.webp"
+    },
+    {
+        "id": 4,
+        "nombre": "Pirámides de Egipto",
+        "descripción": "Egipto, un destino lleno de historia y misterio, te invita a explorar sus antiguas maravillas. Desde las majestuosas pirámides de Giza hasta los templos de Luxor, sumérgete en la fascinante cultura faraónica. Disfruta de un crucero por el Nilo y descubre un país donde cada rincón cuenta una historia milenaria.",
+        "encabezado": "Un lugar excepcional!",
+        "precio": 2100,
+        "destinos": true,
+        "paquetes": false,
+        "promocion": true,
+        "image": "../resources/images/destinos/pirámides rectangular.webp"
+    },
+    {
+        "id": 5,
+        "nombre": "Roma",
+        "descripción": "Roma te invita a explorar su legado histórico y artístico. Camina entre las ruinas del Coliseo, admira la majestuosidad del Vaticano y la Capilla Sixtina, y recorre sus encantadoras calles llenas de historia. Vive la esencia de la cultura romana en un destino fascinante que combina pasado y presente.",
+        "encabezado": "Simplemente, eterna!",
+        "precio": 2300,
+        "destinos": false,
+        "paquetes": true,
+        "promocion": true,
+        "image": "../resources/images/paquetes/coliseo.webp"
+    },
+    {
+        "id": 6,
+        "nombre": "Moscú",
+        "descripción": "Moscú, una ciudad donde la historia y la modernidad se entrelazan, te invita a descubrir su grandeza. Pasea por la icónica Plaza Roja, admira las coloridas cúpulas de la Catedral de San Basilio y explora el majestuoso Kremlin. Sumérgete en la vibrante cultura rusa y disfruta de su arquitectura y arte únicos.",
+        "encabezado": "Elegancia imperial",
+        "precio": 1500,
+        "destinos": false,
+        "paquetes": false,
+        "promocion": true,
+        "image": "../resources/images/paquetes/istockphoto-1364293537-1024x1024.webp"
+    },
+    {
+        "id": 7,
+        "nombre": "Perú",
+        "descripción": "Machu-Pichu, la joya del antiguo Imperio Inca, te espera para vivir una experiencia mística. Recorre sus asombrosas ruinas, rodeadas de majestuosas montañas y envueltas en un aura de historia y misterio. Descubre esta maravilla del mundo, sumérgete en su cultura ancestral y disfruta de vistas espectaculares.",
+        "encabezado": "Misterio entre las nubes",
+        "precio": 2500,
+        "destinos": false,
+        "paquetes": true,
+        "promocion": true,
+        "image": "../resources/images/paquetes/machu-picchu-peru-1.webp"
+    },
+    {
+        "id": 8,
+        "nombre": "Luna",
+        "descripción": "La luna, nuestro satélite natural, te ofrece una experiencia fuera de este mundo. Camina por su superficie, contempla la Tierra desde el espacio y explora los cráteres que cuentan la historia del universo. Vive la emoción de la gravedad reducida y descubre un paisaje deslumbrante en este destino único y fascinante.",
+        "encabezado": "Un destino incomparable!",
+        "precio": 3500,
+        "destinos": false,
+        "paquetes": true,
+        "promocion": true,
+        "image": "../resources/images/paquetes/mate_en_la_luna.webp"
+    },
+    {
+        "id": 9,
+        "nombre": "Australia",
+        "descripción": "Australia te invita a descubrir su impresionante diversidad. Explora la vibrante Gran Barrera de Coral, adéntrate en el vasto Outback y maravíllate con la vida salvaje única. Desde las icónicas ciudades de Sídney y Melbourne hasta sus playas paradisíacas, este destino te ofrece aventuras inolvidables en cada rincón.",
+        "encabezado": "Un destino sorprendente",
+        "precio": 2200,
+        "destinos": false,
+        "paquetes": true,
+        "promocion": false,
+        "image": "../resources/images/paquetes/sidney.webp"
+    }
+]
