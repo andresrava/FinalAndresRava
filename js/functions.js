@@ -38,6 +38,7 @@ function renderizaCardsCarousel (lista) {
     return salida;
 }
 
+//Esta función genera una lista con las "cards" para agregar a una lista en el DOM
 function renderizaCardsLista (lista) {
   let salida = "";
   let indice = 1;
@@ -54,6 +55,9 @@ function renderizaCardsLista (lista) {
   }
   return salida;
 }
+
+// Esta función agrega un item al carrito que esté en localStorage. 
+// Cada item es un key:value donde la key es el id del producto y el value la cantidad
 
 function agregaAlCarrito(producto) {
   let cantidad = null;
@@ -86,9 +90,9 @@ function agregaAlCarrito(producto) {
     let carrito = {[codigo]: cantidad};
     localStorage.setItem('carrito', JSON.stringify(carrito));
   }
-  // carrito = localStorage.getItem('carrito');
 }
 
+// Asigno cada botón de la lista su función
 
 function activaBotones(lista) {
   for (let i = 1; i <= lista.length; i++) {
@@ -102,6 +106,11 @@ function activaBotones(lista) {
 }
 
 
+// A partir de la lista de productos (array de objetos) y el carrito
+// genero una descripción de la compra
+// Crea la opción de modificarla y eliminar todo el carrito
+// En la descripción también se muestra el importe total
+// También guarda el total en la localStorage
 
 function renderizaCarrito() {
   let salida = "";
@@ -158,6 +167,8 @@ function activaBotonesCarrito() {
   
 }
 
+//  Elimino o modifico los elementos del carrito.
+// Recibe como parámetro la id del producto
 
 function borraDelCarrito(codigo) {
   const carrito = JSON.parse(localStorage.getItem('carrito'));
